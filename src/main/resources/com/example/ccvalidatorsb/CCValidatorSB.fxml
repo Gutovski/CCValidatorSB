@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="165.0" prefWidth="290.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ccvalidatorsb.CCValidatorSBController">
+   <children>
+      <Label prefHeight="17.0" prefWidth="310.0" text="Card Number:" />
+      <HBox prefHeight="38.0" prefWidth="234.0" spacing="10.0" style="-fx-border-color: lightgray;">
+         <children>
+            <ImageView fx:id="imgv_card" fitHeight="22.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+            <TextField fx:id="txt_card_number" onKeyReleased="#onCCKeyReleased" prefHeight="25.0" prefWidth="135.0" style="-fx-text-box-border: transparent; -fx-focus-color: transparent; -fx-faint-focus-color: transparent; -fx-background-color: none;" />
+            <ImageView fx:id="imgv_oknok" fitHeight="22.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="3.0" right="5.0" top="6.0" />
+         </padding>
+      </HBox>
+      <Separator minHeight="5.0" prefHeight="0.0" prefWidth="338.0" visible="false" />
+      <Label prefHeight="17.0" prefWidth="130.0" text="Expiration Date:" />
+      <Label prefHeight="17.0" prefWidth="89.0" text="CVV:" />
+      <HBox layoutX="30.0" layoutY="47.0" prefHeight="38.0" prefWidth="120.0" spacing="10.0" style="-fx-border-color: lightgray;">
+         <children>
+            <TextField fx:id="txt_exp_date" prefHeight="25.0" prefWidth="120.0" promptText="mm/yyyy" style="-fx-text-box-border: transparent; -fx-focus-color: transparent; -fx-faint-focus-color: transparent; -fx-background-color: none;" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="3.0" right="5.0" top="6.0" />
+         </padding>
+      </HBox>
+      <Separator layoutX="30.0" layoutY="85.0" minHeight="5.0" prefHeight="5.0" prefWidth="7.0" visible="false" />
+      <HBox layoutX="30.0" layoutY="107.0" prefHeight="38.0" prefWidth="105.0" spacing="10.0" style="-fx-border-color: lightgray;">
+         <children>
+            <TextField fx:id="txt_cvv" onKeyReleased="#onCVVKeyReleased" prefHeight="25.0" prefWidth="105.0" promptText="XXX" style="-fx-text-box-border: transparent; -fx-focus-color: transparent; -fx-faint-focus-color: transparent; -fx-background-color: none;" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="3.0" right="5.0" top="6.0" />
+         </padding>
+      </HBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="30.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</FlowPane>
